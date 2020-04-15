@@ -1,7 +1,6 @@
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const authConfig = require('../config/auth.json');
+const generateToken = require('../utils/generateToken');
 
 module.exports = {
 
@@ -17,7 +16,10 @@ module.exports = {
       // TO NOT RETURN THE PASSWORD
       user.password = undefined;
 
-      return response.send(user);
+      return response.send({
+        user,
+        token: generateToken({ id: user.id })
+      });
     } catch (error) {
       return response.status(400).send({ error: "User not created." });
     }
@@ -37,9 +39,10 @@ module.exports = {
     // TO NOT RETURN THE PASSWORD
     user.password = undefined;
 
-    const token = jwt.sign({ id: user.id }, authConfig.secret, { expiresIn: 86400 });
-
-    response.send({ user, token });
+    response.send({ 
+      user, 
+      token: generateToken({ id: user.id })
+    });
   }
 
 }

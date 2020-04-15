@@ -29,6 +29,7 @@ One of these courses is the development of an API with express, mongo and Node. 
 I am attending several classes and taking several courses in the world of Node, React and ReactNative and I found a course by the guys at [@Rocketseat](https://github.com/Rocketseat) these guys are incredible they have several free courses and they teach very well!
 
 One of these courses is the development of an API with express, mongo and Node. So the idea of ​​this project is to replicate what these guys did and add an interface with React and automated tests.
+<br /> 
 <br />
 
 ## :wrench: Create Your Secret
@@ -53,8 +54,10 @@ yourself. It's very simple just follow these steps:
 ## :memo: License
 
 this project is under mit [MIT license ](LICENSE) for more details
-<br /><br />
+<br />
+<br />
 
 ## :wave: Social
 
 Follow me on my [Instagram](https://www.instagram.com/edvaldo_junior_dev/) and let's talk a little :wink:
+<br />
