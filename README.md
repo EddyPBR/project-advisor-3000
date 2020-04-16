@@ -51,6 +51,37 @@ yourself. It's very simple just follow these steps:
 
 <br />
 
+## :email: Configure the sendmailer
+
+To activate password recovery, it is necessary to configure nodemailer.
+
+- Acess the following path: <br />
+  `./backend/src/config/`
+
+- Create the following file <br />
+  `mail.json` 
+<br />
+
+However, I recommend using Mailtrap.io (Secure email test for preparation and development). It's easy to set up:
+
+- First access the [Mailtrap.io](https://mailtrap.io/)
+
+- Second click on signUp - inform what is requested after the account is finalized you will have an inbox configured, click on it.
+
+- Third in the integration section choose the nodemailer option and copy the code.
+
+Now to configure nodemailer copy the code below and replace the one requested it's simple:
+```
+{
+  "host": "yourHostMailtrap", 
+  "post": 2525, 
+  "user": "yourUserMailtrap", 
+  "pass": "yourPassMailtrap"
+}```
+
+Now everything is ok!
+<br />
+
 ## :memo: License
 
 this project is under mit [MIT license ](LICENSE) for more details

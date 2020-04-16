@@ -10,7 +10,7 @@ module.exports = (request, response, next) => {
   /**
    * A token is sent with two words bearer and hash
    * so we have to split them.
-   */
+   **/
 
   const parts = authHeader.split(' ');
 

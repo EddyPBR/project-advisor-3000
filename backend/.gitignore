@@ -7,7 +7,7 @@ bin-release/
 # Other files and folders
 .settings/
 node_modules/
-src/config/auth.json
+src/config/
 
 # Executables
 *.swf
