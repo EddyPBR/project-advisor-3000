@@ -71,13 +71,13 @@ However, I recommend using Mailtrap.io (Secure email test for preparation and de
 - Third in the integration section choose the nodemailer option and copy the code.
 
 Now to configure nodemailer copy the code below and replace the one requested it's simple:
-```
+`
 {
   "host": "yourHostMailtrap", 
   "post": 2525, 
   "user": "yourUserMailtrap", 
   "pass": "yourPassMailtrap"
-}```
+}`
 
 Now everything is ok!
 <br />
