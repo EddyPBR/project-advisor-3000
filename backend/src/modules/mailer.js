@@ -11,8 +11,13 @@ const transport = nodemailer.createTransport({
 });
 
 transport.use('compile', hbs({
-  viewEngine: 'handlerbars',
-  viewPath: path.resolve('./src/resources/mail/'),
+  viewEngine: {
+    extName: '.html',
+    partialsDir: path.resolve('./src/resources/mail/'),
+    layoutsDir: path.resolve('./src/resources/mail/'),
+    defaultLayout: 'auth/forgot_password.html',
+  },
+  viewPath: path.resolve('./src/resources/mail/auth/'),
   extName: '.html'
 }));
 
