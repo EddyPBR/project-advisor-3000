@@ -13,7 +13,7 @@ routes.post('/auth/forgot_password', authController.recoverPassword);
 routes.put('/auth/reset_password', authController.resetPassword);
 
 routes.get('/projects', authMiddleware, projectController.index);
-routes.get('/:projectId', authMiddleware, projectController.search);
+routes.get('/projects/:projectId', authMiddleware, projectController.search);
 routes.post('/projects', authMiddleware, projectController.register);
 routes.put('/:projectId', authMiddleware, projectController.update);
 routes.delete('/:projectId', authMiddleware, projectController.delete);
