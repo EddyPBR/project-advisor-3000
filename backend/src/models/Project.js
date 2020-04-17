@@ -7,20 +7,22 @@ const ProjectSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    require: true
+    require: true,
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    require: true
+    require: true,
   },
-  tasks: [{
-    type: mongoose.Schema.Types.ObjectId,
-    red: 'Task'
-  }],
+  tasks: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Task',
+    },
+  ],
   createAt: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
 });
 

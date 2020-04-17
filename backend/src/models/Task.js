@@ -3,26 +3,26 @@ const mongoose = require('../database/connection');
 const TaskSchema = new mongoose.Schema({
   title: {
     type: String,
-    require: true
+    require: true,
   },
   project: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Project',
-    require: true
+    require: true,
   },
   assignedTo: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    require: true
+    require: true,
   },
   completed: {
     type: Boolean,
     require: true,
-    default: false
+    default: false,
   },
   createAt: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
 });
 

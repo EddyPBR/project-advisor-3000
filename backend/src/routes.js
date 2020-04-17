@@ -14,8 +14,8 @@ routes.put('/auth/reset_password', authController.resetPassword);
 
 routes.get('/projects', authMiddleware, projectController.index);
 routes.get('/projects/:projectId', authMiddleware, projectController.search);
-routes.post('/projects', authMiddleware, projectController.register);
-routes.put('/:projectId', authMiddleware, projectController.update);
-routes.delete('/:projectId', authMiddleware, projectController.delete);
+routes.post('/projects', authMiddleware, projectController.create);
+routes.put('/projects/:projectId', authMiddleware, projectController.update);
+routes.delete('/projects/:projectId', authMiddleware, projectController.delete);
 
 module.exports = routes;

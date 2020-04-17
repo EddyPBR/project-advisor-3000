@@ -6,7 +6,7 @@ const database = 'login-system-api';
 mongoose.connect(`mongodb://${server}/${database}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useFindAndModify: false
+  useFindAndModify: false,
 });
 
 mongoose.set('useCreateIndex', true);
