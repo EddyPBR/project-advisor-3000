@@ -77,9 +77,21 @@ Now everything is ok!
 <br />
 <br />
 
+## :white_check_mark :white_check_mark: How test the API
+
+if you want to test only the API, you can use this [file](https://github.com/EddyPBR/login-system-api/blob/master/backend/InsomniaToTest.json) of [insomnia] configuration (https://insomnia.rest/download/). It's very simple and easy.
+<br />
+<br />
+
+## :star: Interface Prototype with Figma
+
+The prototype of the interface was developed on the [FIGMA](https://www.figma.com/) platform to see the prototype access the [link](https://www.figma.com/file/L4fMK98Za4CdQMCqXSc0vJ/api?node-id=0%3A1).
+<br />
+<br />
+
 ## :memo: License
 
-this project is under mit [MIT license ](LICENSE) for more details
+This project is under mit [MIT license](LICENSE) for more details
 <br />
 <br />
 
