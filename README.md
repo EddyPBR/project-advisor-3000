@@ -79,7 +79,7 @@ Now everything is ok!
 
 ## :white_check_mark: How test the API
 
-if you want to test only the API, you can use this [file](https://github.com/EddyPBR/login-system-api/blob/master/backend/InsomniaToTest.json) of [insomnia] configuration (https://insomnia.rest/download/). It's very simple and easy.
+if you want to test only the API, you can use this [file](https://github.com/EddyPBR/login-system-api/blob/master/backend/InsomniaToTest.json) of [insomnia](https://insomnia.rest/download/). It's very simple and easy.
 <br />
 <br />
 
