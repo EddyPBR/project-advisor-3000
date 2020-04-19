@@ -1,0 +1,66 @@
+.register-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  max-width: 470px;
+  margin-bottom: 60px;
+
+  @media (max-width: 960px) {
+    max-width: 100%;
+  }
+
+  .label {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 460px) {
+      width: 100%;
+    }
+
+    input {
+      min-width: 220px;
+
+      @media (max-width: 540px){
+        min-width: 200px;
+      }
+    }
+  }
+
+  .row {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 540px){
+      margin-top: 0px;
+    }
+
+    @media (max-width: 460px){
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 320px){
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  span {
+    margin-top: 20px;
+  }
+
+  button {
+    @media (max-width: 560px){
+      margin-top: 60px;
+    }
+  }
+  
+}

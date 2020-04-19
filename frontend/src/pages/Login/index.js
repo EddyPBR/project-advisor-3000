@@ -10,7 +10,7 @@ export default class home extends Component {
           <div class="main-f-column">
 
             <div class="main-content">
-              <h1 class="title">LET’S START YOUR PROJECT!</h1>
+              <h1 class="title">LET’S RELEASE DOPAMINE!</h1>
 
               <p class="text">
                 The best way to complete your projects is to release dopamine
