@@ -1,9 +1,16 @@
 @import '../../variables.scss';
 
 .cards-container {
-  width: 100%;
-  padding: 0px 95px;
+  padding: 0px 75px;
   margin-top: 60px;
+
+  @media (max-width: 1180px) {
+    padding: 0px 20px;
+  }
+
+  @media (max-width: 520px) {
+    padding: 0px 0px;
+  }
 
   .cards-flex-grid {
     display: flex;
@@ -18,8 +25,11 @@
     background: linear-gradient(180deg, #2C3744 0%, #1A2532 100%);
     box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    margin-left: 30px;
-    margin-bottom: 50px;
+    margin: 50px 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 270px;
+    max-width: 540px;
 
     .card-header {
       display: flex;
@@ -93,5 +103,5 @@
 
     }
   }
-  
+
 }

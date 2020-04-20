@@ -211,15 +211,25 @@ body {
       margin-right: 4px;
     }
 
-    input {
+    .search {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow-y: hidden;
       width: 270px;
       height: 32px;
       border: none;
       border-radius: 10px;
       padding: 10px;
       background-color: $secondary-dark;
-      color: $grey;
       margin-left: 30px;
+
+      input {
+        background: none;
+        border: none;
+        color: $grey;
+        margin-left: 5px;
+      }
     }
 
     a {
@@ -241,16 +251,28 @@ body {
     flex-direction: row;
     align-items: center;
 
-    a {
+    .logout {
+      display: flex;
+      align-items: center;
       color: $grey;
       font-size: 14px;
       text-decoration: none;
       transition: .3s;
+      overflow-y: hidden;
     }
 
-    a:hover {
+    .logout:hover {
       font-size: 14px;
       color: $red;
+      svg {
+        transition: .3s;
+        transform: scale(1.1);
+      }
+    }
+
+    span {
+      font-size: 14px;
+      margin-left: 5px;
     }
   }
 
@@ -273,6 +295,9 @@ body {
     color: $green;
     text-decoration: none;
     transition: .3s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
   
   .add-project:hover {
