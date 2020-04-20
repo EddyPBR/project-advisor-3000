@@ -40,16 +40,19 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      overflow-y: hidden;
 
       .title {
         font-size: 18px;
         line-height: 21px;
         color: $grey;
+        max-width: 240px;
       }
 
       .links {
         display: flex;
         flex-direction: row;
+        align-self: flex-start;
 
         a {
           text-decoration: none;
