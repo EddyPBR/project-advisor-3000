@@ -193,12 +193,26 @@ body {
     justify-content: space-between;
     margin-top: 30px;
     padding: 0px 5px;
+
+    @media (max-width: 700px){
+      align-items: flex-start;
+    }
+
+    @media(max-width: 280px){
+      flex-direction: column;
+    }
+
   }
 
   .f-col {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @media (max-width: 700px){
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
     .row {
       display: flex;
@@ -209,26 +223,8 @@ body {
     span {
       font-size: 14px;
       margin-right: 4px;
-    }
-
-    .search {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      overflow-y: hidden;
-      width: 270px;
-      height: 32px;
-      border: none;
-      border-radius: 10px;
-      padding: 10px;
-      background-color: $secondary-dark;
-      margin-left: 30px;
-
-      input {
-        background: none;
-        border: none;
-        color: $grey;
-        margin-left: 5px;
+      @media (max-width: 400px){
+        display: none;
       }
     }
 
@@ -250,6 +246,10 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @media(max-width: 280px){
+      margin-top: 20px
+    }
 
     .logout {
       display: flex;
@@ -280,6 +280,10 @@ body {
     margin-top: 50px;
     border-bottom: 2px solid $secondary-dark;
 
+    @media (max-width:700px){
+      margin-top: 60px;
+    }
+
     .opt-row {
       display: flex;
       flex-direction: row;
@@ -302,6 +306,44 @@ body {
   
   .add-project:hover {
     filter: brightness(1.40);
+  }
+
+  .search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-y: hidden;
+    width: 270px;
+    height: 32px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: $secondary-dark;
+    margin-left: 30px;
+  
+    @media (max-width: 700px){
+      display: none;
+    }
+  
+    input {
+      background: none;
+      border: none;
+      color: $grey;
+      margin-left: 5px;
+    }
+  }
+
+  .search.mobile {
+    @media (max-width:700px){
+      display: flex;
+      margin-top: 30px;
+      margin-left: 0;
+      width: 100%;
+    }
+
+    @media (min-width:700px){
+      display: none;
+    }
   }
   
 }

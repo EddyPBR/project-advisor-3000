@@ -39,6 +39,11 @@ export default class home extends Component {
             </div>
           </div>
 
+          <div className="search mobile">
+            <FiSearch size={18} />
+            <input type="text" id="search" placeholder="Search Project..." />
+          </div>
+
           <div className="projects-options">
             <div className="opt-row">
               <Link className="add-project" to="#">
@@ -51,143 +56,140 @@ export default class home extends Component {
 
         <div className="cards-container">
           <div className="cards-flex-grid">
-
-              <div className="card">
-                <div className="card-header">
-                  <b className="title">Lorem ipsum dolor</b>
-                  <div className="links">
-                    <Link className="edit" to="#">
-                      <FiEdit size={18} />
-                    </Link>
-                    <Link className="erase" to="#">
-                      <FiTrash2 size={18} />
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="card-content">
-                  <div className="card-body">
-                    <p>
-                      Ultrices erat sit amet neque commodo vehicula. Etiam
-                      libero ante, finibus.
-                    </p>
-                  </div>
-
-                  <div className="card-footer">
-                    <Link to="#">See Project</Link>
-                  </div>
+            <div className="card">
+              <div className="card-header">
+                <b className="title">Lorem ipsum dolor</b>
+                <div className="links">
+                  <Link className="edit" to="#">
+                    <FiEdit size={18} />
+                  </Link>
+                  <Link className="erase" to="#">
+                    <FiTrash2 size={18} />
+                  </Link>
                 </div>
               </div>
 
-              <div className="card">
-                <div className="card-header">
-                  <b className="title">Lorem ipsum dolor</b>
-                  <div className="links">
-                    <Link className="edit" to="#">
-                      <FiEdit size={18} />
-                    </Link>
-                    <Link className="erase" to="#">
-                      <FiTrash2 size={18} />
-                    </Link>
-                  </div>
+              <div className="card-content">
+                <div className="card-body">
+                  <p>
+                    Ultrices erat sit amet neque commodo vehicula. Etiam libero
+                    ante, finibus.
+                  </p>
                 </div>
 
-                <div className="card-content">
-                  <div className="card-body">
-                    <p>
-                      Ultrices erat sit amet neque commodo vehicula. Etiam
-                      libero ante, finibus.
-                    </p>
-                  </div>
+                <div className="card-footer">
+                  <Link to="#">See Project</Link>
+                </div>
+              </div>
+            </div>
 
-                  <div className="card-footer">
-                    <Link to="#">See Project</Link>
-                  </div>
+            <div className="card">
+              <div className="card-header">
+                <b className="title">Lorem ipsum dolor</b>
+                <div className="links">
+                  <Link className="edit" to="#">
+                    <FiEdit size={18} />
+                  </Link>
+                  <Link className="erase" to="#">
+                    <FiTrash2 size={18} />
+                  </Link>
                 </div>
               </div>
 
-              <div className="card">
-                <div className="card-header">
-                  <b className="title">Lorem ipsum dolor</b>
-                  <div className="links">
-                    <Link className="edit" to="#">
-                      <FiEdit size={18} />
-                    </Link>
-                    <Link className="erase" to="#">
-                      <FiTrash2 size={18} />
-                    </Link>
-                  </div>
+              <div className="card-content">
+                <div className="card-body">
+                  <p>
+                    Ultrices erat sit amet neque commodo vehicula. Etiam libero
+                    ante, finibus.
+                  </p>
                 </div>
 
-                <div className="card-content">
-                  <div className="card-body">
-                    <p>
-                      Ultrices erat sit amet neque commodo vehicula. Etiam
-                      libero ante, finibus.
-                    </p>
-                  </div>
+                <div className="card-footer">
+                  <Link to="#">See Project</Link>
+                </div>
+              </div>
+            </div>
 
-                  <div className="card-footer">
-                    <Link to="#">See Project</Link>
-                  </div>
+            <div className="card">
+              <div className="card-header">
+                <b className="title">Lorem ipsum dolor</b>
+                <div className="links">
+                  <Link className="edit" to="#">
+                    <FiEdit size={18} />
+                  </Link>
+                  <Link className="erase" to="#">
+                    <FiTrash2 size={18} />
+                  </Link>
                 </div>
               </div>
 
-              <div className="card">
-                <div className="card-header">
-                  <b className="title">Lorem ipsum dolor</b>
-                  <div className="links">
-                    <Link className="edit" to="#">
-                      <FiEdit size={18} />
-                    </Link>
-                    <Link className="erase" to="#">
-                      <FiTrash2 size={18} />
-                    </Link>
-                  </div>
+              <div className="card-content">
+                <div className="card-body">
+                  <p>
+                    Ultrices erat sit amet neque commodo vehicula. Etiam libero
+                    ante, finibus.
+                  </p>
                 </div>
 
-                <div className="card-content">
-                  <div className="card-body">
-                    <p>
-                      Ultrices erat sit amet neque commodo vehicula. Etiam
-                      libero ante, finibus.
-                    </p>
-                  </div>
+                <div className="card-footer">
+                  <Link to="#">See Project</Link>
+                </div>
+              </div>
+            </div>
 
-                  <div className="card-footer">
-                    <Link to="#">See Project</Link>
-                  </div>
+            <div className="card">
+              <div className="card-header">
+                <b className="title">Lorem ipsum dolor</b>
+                <div className="links">
+                  <Link className="edit" to="#">
+                    <FiEdit size={18} />
+                  </Link>
+                  <Link className="erase" to="#">
+                    <FiTrash2 size={18} />
+                  </Link>
                 </div>
               </div>
 
-              <div className="card">
-                <div className="card-header">
-                  <b className="title">Lorem ipsum dolor</b>
-                  <div className="links">
-                    <Link className="edit" to="#">
-                      <FiEdit size={18} />
-                    </Link>
-                    <Link className="erase" to="#">
-                      <FiTrash2 size={18} />
-                    </Link>
-                  </div>
+              <div className="card-content">
+                <div className="card-body">
+                  <p>
+                    Ultrices erat sit amet neque commodo vehicula. Etiam libero
+                    ante, finibus.
+                  </p>
                 </div>
 
-                <div className="card-content">
-                  <div className="card-body">
-                    <p>
-                      Ultrices erat sit amet neque commodo vehicula. Etiam
-                      libero ante, finibus.
-                    </p>
-                  </div>
+                <div className="card-footer">
+                  <Link to="#">See Project</Link>
+                </div>
+              </div>
+            </div>
 
-                  <div className="card-footer">
-                    <Link to="#">See Project</Link>
-                  </div>
+            <div className="card">
+              <div className="card-header">
+                <b className="title">Lorem ipsum dolor</b>
+                <div className="links">
+                  <Link className="edit" to="#">
+                    <FiEdit size={18} />
+                  </Link>
+                  <Link className="erase" to="#">
+                    <FiTrash2 size={18} />
+                  </Link>
                 </div>
               </div>
 
-              
+              <div className="card-content">
+                <div className="card-body">
+                  <p>
+                    Ultrices erat sit amet neque commodo vehicula. Etiam libero
+                    ante, finibus.
+                  </p>
+                </div>
+
+                <div className="card-footer">
+                  <Link to="#">See Project</Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </>
