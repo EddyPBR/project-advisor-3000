@@ -1,11 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
-
-// VARs
-$yellow: #F4AF25;
-$dark: #696969;
-$grey: #C3CBD5;
-$main-background: #0F1824;
-$blue: #398EF2;
+@import './variables.scss';
 
 * {
   margin: 0;
@@ -90,22 +83,7 @@ body {
   line-height: 14px;
 }
 
-label {
-  color: $dark;
-  font-size: 14px;
-  line-height: 32px;
-}
-
-input {
-  border: none;
-  border-bottom: 2px solid $grey;
-  background: none;
-  font-size: 14px;
-  color: $grey;
-  padding: 5px 0px;
-}
-
-// base structure
+// BASE STRUCTURE
 .main-container {
   min-height: 100vh;
   width: 100%;
@@ -176,4 +154,130 @@ input {
     }
 
   }
+
+  label {
+    color: $dark;
+    font-size: 14px;
+    line-height: 32px;
+  }
+  
+  input {
+    border: none;
+    border-bottom: 2px solid $grey;
+    background: none;
+    font-size: 14px;
+    color: $grey;
+    padding: 5px 0px;
+  }
+  
+}
+
+// HEADER STRUCTURE
+.project-header {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0px 95px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1280px) {
+    padding: 0px 40px;
+  }
+
+  @media (max-width: 520px) {
+    padding: 0px 20px;
+  }
+
+  .header-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 0px 5px;
+  }
+
+  .f-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    span {
+      font-size: 14px;
+      margin-right: 4px;
+    }
+
+    input {
+      width: 270px;
+      height: 32px;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: $secondary-dark;
+      color: $grey;
+      margin-left: 30px;
+    }
+
+    a {
+      color: $grey;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: bold;
+      font-size: 14px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+  .l-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    a {
+      color: $grey;
+      font-size: 14px;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    a:hover {
+      font-size: 14px;
+      color: $red;
+    }
+  }
+
+  .projects-options {
+    margin-top: 50px;
+    border-bottom: 2px solid $secondary-dark;
+
+    .opt-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 5px;
+    }
+  }
+
+  .add-project {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $green;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  .add-project:hover {
+    filter: brightness(1.40);
+  }
+  
 }

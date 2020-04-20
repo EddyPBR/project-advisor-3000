@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Recover from './pages/Recover';
+import Projects from './pages/Projects';
 
 export default class Routes extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class Routes extends Component {
           <Route path="/" exact component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/recover" component={Recover} />
+          <Route path="/projects" component={Projects} />
         </Switch>
       </BrowserRouter>
     )
