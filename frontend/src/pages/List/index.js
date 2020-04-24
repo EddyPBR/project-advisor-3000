@@ -10,7 +10,7 @@ import {
   FiUser,
 } from 'react-icons/fi';
 
-export default class home extends Component {
+export default class List extends Component {
   render() {
     return (
       <>
@@ -32,7 +32,7 @@ export default class home extends Component {
               </div>
             </div>
             <div className="l-col">
-              <Link to="#" class="logout">
+              <Link to="/" class="logout">
                 <FiPower size={22} color="#F72222" />
                 <span>Sign Out</span>
               </Link>
