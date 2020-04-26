@@ -16,13 +16,19 @@
   }
 
   .form-project {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+
+    @media(max-width: 720px){
+      display: flex;
+      flex-direction: column;
+    }
 
     .form-content {
       display: flex;
       flex-direction: column;
+      width: 100%;
       max-width: 370px;
 
       .row {
@@ -47,9 +53,19 @@
         }
 
         .row-add-task {
+          width: 100%;
           display: flex;
           flex-direction: row;
           align-items: center;
+
+          input {
+            max-width: 320px;
+            width: 100%;
+
+            @media(max-width: 900px) {
+              width: 80%;
+            }
+          }
 
           a {
             font-size: 14px;
@@ -67,14 +83,16 @@
             text-shadow: $green 0px 0px 2px;
           }
         }
-
       }
     }
 
     .form-tasks {
       display: flex;
       flex-direction: column;
-      min-width: 470px;
+
+      @media(max-width: 720px){
+        margin: 30px 0px;
+      }
 
       b {
         font-size: 22px;
@@ -107,6 +125,8 @@
             display: inline-block;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
+            max-height: 10px;
           }
 
           input:checked:after {
@@ -139,5 +159,18 @@
 
       }
     }
+
+    button {
+      margin-bottom: 30px;
+
+      @media(max-width: 720px){
+        margin-top: 30px;
+      }
+    }
+
+    button:hover {
+      box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.7);
+    }
+
   }
 }

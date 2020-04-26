@@ -67,7 +67,7 @@ export default class Project extends Component {
               <div class="row">
                 <label>Tasks</label>
                 <div class="row-add-task">
-                  <input type="text" placeholder="new Task" />
+                  <input type="text" placeholder="Name of the task" />
                   <Link to="#">
                     <FiPlus size={22} color="#7AF49C" />
                     <span>Add</span>
@@ -99,6 +99,9 @@ export default class Project extends Component {
 
               </div>
             </div>
+
+            <button class="button yellow">Register</button>
+
           </form>
         </div>
       </>
