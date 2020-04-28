@@ -1,8 +1,9 @@
+<br />
 <h3 align="center">:lock: :key: :email:</h3>
-<h1 align="center" decoration="none"> LOGIN SYSTEM API </h1>
+<h1 align="center" decoration="none"> PROJECT ADVISOR 3000 </h1>
 <br />
 
-This project consists in the development of an API for a user registration system (login and password) that has an encrypted password and a password recovery system by sending email.
+The project manager 3000 consists of a project management platform with steps that must be reached the user performs the registration creates their projects and stipulates the steps that must be reached.
 <br />
 <br />
 
@@ -15,6 +16,8 @@ This project has the following technologies:
 - [Express](https://expressjs.com/pt-br/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
+- [React](https://reactjs.org/)
+- [Sass](https://sass-lang.com/)
 <br />
 
 ## :mortar_board: The Idea
