@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './styles.scss';
 import mainImage from '../../assets/main-image.png';
@@ -7,17 +7,18 @@ import api from '../../services/api';
 
 export default function Login() {
 
+  const [email = '', setEmail] = useState();
+  const [password = '', setPassword] = useState();
   const history = useHistory();
 
   async function handleLogin(event) {
     event.preventDefault();
-
     try {
       const response = await api.post('auth/authenticate', {
-        email: 'edvaldojunior1310@gmail.com',
-        password: '12345678',
+        email,
+        password,
       });
-      // next step get token.
+      sessionStorage.setItem('token', response.data.token);
       history.push('/list');
     } catch (error) {
       alert('failed to perform the login, please try again');
@@ -40,12 +41,24 @@ export default function Login() {
             <form className="login-form" onSubmit={handleLogin}>
               <div className="label">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email"></input>
+                <input 
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={email}
+                    onChange={ event => setEmail(event.target.value) }
+                />
               </div>
 
               <div className="label">
                 <label htmlFor="password">Password</label>
-                <input type="password" id="password" name="password"></input>
+                <input 
+                    type="password"
+                    id="password"
+                    name="password"
+                    value={password}
+                    onChange={ event => setPassword(event.target.value) }
+                />
               </div>
 
               <div className="row">
