@@ -1,55 +1,76 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import './styles.scss';
 import mainImage from '../../assets/main-image.png';
 
-export default class Login extends Component {
-  render() {
-    return (
-      <div className="main-container">
-        <div className="main-row">
-          <div className="main-f-column">
+import api from '../../services/api';
 
-            <div className="main-content">
-              <h1 className="title">LET’S RELEASE DOPAMINE!</h1>
+export default function Login() {
 
-              <p className="text">
-                The best way to complete your projects is to release dopamine
-                with each completed step! and this with the project advisor 3000
-                becomes even more stimulating!
-              </p>
+  const history = useHistory();
 
-              <form className="login-form">
-                <div className="label">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email"></input>
-                </div>
+  async function handleLogin(event) {
+    event.preventDefault();
 
-                <div className="label">
-                  <label for="password">Password</label>
-                  <input type="password" id="password" name="password"></input>
-                </div>
+    try {
+      const response = await api.post('auth/authenticate', {
+        email: 'edvaldojunior1310@gmail.com',
+        password: '12345678',
+      });
+      // next step get token.
+      history.push('/list');
+    } catch (error) {
+      alert('failed to perform the login, please try again');
+    }
+  }
 
-                <div className="row">
-                    <button className="button yellow" type="button">Sign In</button>
-                    <Link className="link" href="/recover">Forgot your password?</Link>
-                </div>
+  return (
+    <div className="main-container">
+      <div className="main-row">
+        <div className="main-f-column">
+          <div className="main-content">
+            <h1 className="title">LET’S RELEASE DOPAMINE!</h1>
 
-                <span className="unselect-text">don't have an account?
-                  <Link className="link" href="/login">Sign up</Link>
-                </span>
+            <p className="text">
+              The best way to complete your projects is to release dopamine with
+              each completed step! and this with the project advisor 3000
+              becomes even more stimulating!
+            </p>
 
-              </form>
+            <form className="login-form" onSubmit={handleLogin}>
+              <div className="label">
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" name="email"></input>
+              </div>
 
-            </div>
+              <div className="label">
+                <label htmlFor="password">Password</label>
+                <input type="password" id="password" name="password"></input>
+              </div>
+
+              <div className="row">
+                <button className="button yellow" type="submit">
+                  Sign In
+                </button>
+                <Link className="link" to="/recover">
+                  Forgot your password?
+                </Link>
+              </div>
+
+              <span className="unselect-text">
+                don't have an account?
+                <Link className="link" to="/login">
+                  Sign up
+                </Link>
+              </span>
+            </form>
           </div>
+        </div>
 
-          <div className="main-l-column">
-            <img src={mainImage} alt="Project Advisor 3000" />
-          </div>
-
+        <div className="main-l-column">
+          <img src={mainImage} alt="Project Advisor 3000" />
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
