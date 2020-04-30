@@ -7,8 +7,8 @@ import api from '../../services/api';
 
 export default function Login() {
 
-  const [email = '', setEmail] = useState();
-  const [password = '', setPassword] = useState();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const history = useHistory();
 
   async function handleLogin(event) {
@@ -19,7 +19,8 @@ export default function Login() {
         password,
       });
       sessionStorage.setItem('token', response.data.token);
-      history.push('/list');
+      sessionStorage.setItem('userName', response.data.user.name);
+      history.push('/profile');
     } catch (error) {
       alert('failed to perform the login, please try again');
     }
