@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import api from '../../services/api';
 import './styles.scss';
 import {
   FiEdit,
@@ -11,17 +10,19 @@ import {
   FiUser,
 } from 'react-icons/fi';
 
+import api from '../../services/api';
+
 export default function List() {
   const [projects, setProjects] = useState([]);
-
   const userName = sessionStorage.getItem('userName');
   const token = sessionStorage.getItem('token');
-  const history = useHistory();
 
-  useEffect( () => {
+  const history = useHistory();
+  
+  useEffect(() => {
     api
       .get('projects', {
-        headers: { authorization: 'Bearer '+token }
+        headers: { authorization: 'Bearer ' + token },
       })
       .then((response) => {
         setProjects(response.data.projects);
@@ -30,7 +31,7 @@ export default function List() {
 
   function handleLogout() {
     sessionStorage.clear();
-    history.push('/');
+    history.replace('/');
   }
 
   return (
@@ -73,33 +74,31 @@ export default function List() {
 
       <div className="cards-container">
         <div className="cards-flex-grid">
+          {projects.map((project) => (
+            <div key={project._id} className="card">
+              <div className="card-header">
+                <b className="title">{project.title}</b>
+                <div className="links">
+                  <Link className="edit" to="#">
+                    <FiEdit size={18} />
+                  </Link>
+                  <Link className="erase" to="#">
+                    <FiTrash2 size={18} />
+                  </Link>
+                </div>
+              </div>
 
-          {projects.map(project => (
-            <div key={project._id} className="card" >
-            <div className="card-header">
-              <b className="title">{project.title}</b>
-              <div className="links">
-                <Link className="edit" to="#">
-                  <FiEdit size={18} />
-                </Link>
-                <Link className="erase" to="#">
-                  <FiTrash2 size={18} />
-                </Link>
+              <div className="card-content">
+                <div className="card-body">
+                  <p>{project.description}</p>
+                </div>
+
+                <div className="card-footer">
+                  <Link to={`./${project._id}`}>See Project</Link>
+                </div>
               </div>
             </div>
-
-            <div className="card-content">
-              <div className="card-body">
-                <p>{project.description}</p>
-              </div>
-
-              <div className="card-footer">
-                <Link to={`./${project._id}`}>See Project</Link>
-              </div>
-            </div>
-          </div>
           ))}
-
         </div>
       </div>
     </>

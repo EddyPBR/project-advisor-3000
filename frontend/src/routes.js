@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { PrivateRoute } from './components/PrivateRoute';
 
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -15,7 +16,7 @@ export default class Routes extends Component {
           <Route path="/" exact component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/recover" component={Recover} />
-          <Route path="/profile" exact component={Profile} />
+          <PrivateRoute path="/profile" component={Profile} />
           <Route path="/project" component={Project} />
         </Switch>
       </BrowserRouter>

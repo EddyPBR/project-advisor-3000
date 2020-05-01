@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { isAuthenticated } from '../../utils';
 import './styles.scss';
 import mainImage from '../../assets/main-image.png';
 
@@ -10,6 +11,8 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory();
+
+  if ( isAuthenticated() ) history.push('/profile');
 
   async function handleLogin(event) {
     event.preventDefault();
