@@ -76,7 +76,7 @@ export default function Login() {
 
               <span className="unselect-text">
                 don't have an account?
-                <Link className="link" to="/login">
+                <Link className="link" to="/register">
                   Sign up
                 </Link>
               </span>
