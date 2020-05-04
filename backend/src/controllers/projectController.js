@@ -4,7 +4,7 @@ const Task = require('../models/Task');
 module.exports = {
   async index(request, response) {
     try {
-      const projects = await Project.find().populate(['user', 'tasks']);
+      const projects = await Project.find({ 'user': request.userId }).populate(['user', 'tasks']);
       return response.send({ projects });
     } catch (error) {
       return response.status(400).send({ error: 'Error loading projects' });
@@ -29,7 +29,7 @@ module.exports = {
       const project = await Project.create({
         title,
         description,
-        user: request.UserId,
+        user: request.userId,
       });
 
       await Promise.all(

@@ -3,16 +3,16 @@ const mongoose = require('../database/connection');
 const ProjectSchema = new mongoose.Schema({
   title: {
     type: String,
-    require: true,
+    required: true,
   },
   description: {
     type: String,
-    require: true,
+    required: true,
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    require: true,
+    required: true,
   },
   tasks: [
     {
