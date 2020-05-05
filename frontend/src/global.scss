@@ -27,6 +27,10 @@ body {
   }
 }
 
+.title.green {
+  color: $green;
+}
+
 .text {
   font-size: 16px;
   line-height: 32px;
@@ -60,6 +64,11 @@ body {
 .button.yellow {
   background-color: $yellow;
   color: #FFFFFF;
+}
+
+.button.green {
+  background-color: rgb(77, 204, 149);
+  color: $main-background;
 }
 
 .link {
