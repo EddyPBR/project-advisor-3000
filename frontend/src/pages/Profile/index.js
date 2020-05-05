@@ -74,6 +74,7 @@ export default function List() {
 
       <div className="cards-container">
         <div className="cards-flex-grid">
+
           {projects.map((project) => (
             <div key={project._id} className="card">
               <div className="card-header">
@@ -94,11 +95,12 @@ export default function List() {
                 </div>
 
                 <div className="card-footer">
-                  <Link to={`./${project._id}`}>See Project</Link>
+                  <Link to={`./project/${project._id}`}>See Project</Link>
                 </div>
               </div>
             </div>
           ))}
+
         </div>
       </div>
     </>
