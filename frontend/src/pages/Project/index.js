@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import HeaderLogon from '../../components/HeaderLogon';
 import './styles.scss';
-import { FiPower, FiSearch, FiUser } from 'react-icons/fi';
 
 import api from '../../services/api';
 
@@ -19,39 +19,11 @@ export default function Project(props) {
         setProject(response.data.project);
         setTasks(response.data.project.tasks);
       });
-  }, [token]);
+  }, [props.match.params.id, token]);
 
   return (
     <>
-      <header className="project-header">
-        <div className="header-row">
-          <div className="f-col">
-            <div className="row">
-              <FiUser size={22} />
-              <span>Bem vindo(a),</span>
-              <Link to="#">Edvaldo Junior</Link>
-            </div>
-            <div className="search">
-              <FiSearch size={18} />
-              <input type="text" id="search" placeholder="Search Project..." />
-            </div>
-          </div>
-          <div className="l-col">
-            <Link to="/" className="logout">
-              <FiPower size={22} color="#F72222" />
-              <span>Sign Out</span>
-            </Link>
-          </div>
-        </div>
-
-        <div className="search mobile">
-          <FiSearch size={18} />
-          <input type="text" id="search" placeholder="Search Project..." />
-        </div>
-
-        <div className="projects-options" />
-      </header>
-
+      <HeaderLogon />
       <div className="project-content">
         <form className="form-project">
           <div className="form-content">

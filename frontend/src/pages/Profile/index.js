@@ -1,24 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import HeaderLogon from '../../components/HeaderLogon';
 import './styles.scss';
-import {
-  FiEdit,
-  FiPlus,
-  FiPower,
-  FiSearch,
-  FiTrash2,
-  FiUser,
-} from 'react-icons/fi';
+import { FiEdit, FiTrash2 } from 'react-icons/fi';
 
 import api from '../../services/api';
 
-export default function List() {
+export default function Profile() {
   const [projects, setProjects] = useState([]);
-  const userName = sessionStorage.getItem('userName');
   const token = sessionStorage.getItem('token');
 
-  const history = useHistory();
-  
   useEffect(() => {
     api
       .get('projects', {
@@ -29,52 +20,12 @@ export default function List() {
       });
   }, [token]);
 
-  function handleLogout() {
-    sessionStorage.clear();
-    history.replace('/');
-  }
-
   return (
     <>
-      <header className="project-header">
-        <div className="header-row">
-          <div className="f-col">
-            <div className="row">
-              <FiUser size={22} />
-              <span>Bem vindo(a),</span>
-              <Link to="./profile">{userName}</Link>
-            </div>
-            <div className="search">
-              <FiSearch size={18} />
-              <input type="text" id="search" placeholder="Search Project..." />
-            </div>
-          </div>
-          <div className="l-col">
-            <Link onClick={handleLogout} to="#" className="logout">
-              <FiPower size={22} color="#F72222" />
-              <span>Sign Out</span>
-            </Link>
-          </div>
-        </div>
-
-        <div className="search mobile">
-          <FiSearch size={18} />
-          <input type="text" id="search" placeholder="Search Project..." />
-        </div>
-
-        <div className="projects-options">
-          <div className="opt-row">
-            <Link className="add-project" to="#">
-              <FiPlus size={22} />
-              Register new project
-            </Link>
-          </div>
-        </div>
-      </header>
+      <HeaderLogon options="true"></HeaderLogon>
 
       <div className="cards-container">
         <div className="cards-flex-grid">
-
           {projects.map((project) => (
             <div key={project._id} className="card">
               <div className="card-header">
@@ -100,7 +51,6 @@ export default function List() {
               </div>
             </div>
           ))}
-
         </div>
       </div>
     </>

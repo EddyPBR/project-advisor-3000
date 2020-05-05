@@ -1,55 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import HeaderLogon from '../../components/HeaderLogon';
 import './styles.scss';
-import {
-  FiEdit,
-  FiPlus,
-  FiPower,
-  FiSearch,
-  FiTrash2,
-  FiUser,
-} from 'react-icons/fi';
+import { FiEdit, FiPlus, FiTrash2 } from 'react-icons/fi';
 
 export default class Project extends Component {
   render() {
     return (
       <>
-        <header className="project-header">
-          <div className="header-row">
-            <div className="f-col">
-              <div className="row">
-                <FiUser size={22} />
-                <span>Bem vindo(a),</span>
-                <Link to="#">Edvaldo Junior</Link>
-              </div>
-              <div className="search">
-                <FiSearch size={18} />
-                <input
-                  type="text"
-                  id="search"
-                  placeholder="Search Project..."
-                />
-              </div>
-            </div>
-            <div className="l-col">
-              <Link to="/" class="logout">
-                <FiPower size={22} color="#F72222" />
-                <span>Sign Out</span>
-              </Link>
-            </div>
-          </div>
-
-          <div className="search mobile">
-            <FiSearch size={18} />
-            <input type="text" id="search" placeholder="Search Project..." />
-          </div>
-
-          <div className="projects-options" />
-        </header>
-
+        <HeaderLogon />
         <div className="project-content">
           <form className="form-project">
-
             <div class="form-content">
               <div class="row">
                 <label>Title</label>
@@ -96,12 +57,10 @@ export default class Project extends Component {
                   <FiEdit size={18} color="#F4AF25" />
                   <FiTrash2 size={18} color="#F72222" />
                 </div>
-
               </div>
             </div>
 
             <button class="button green">Save</button>
-
           </form>
         </div>
       </>
