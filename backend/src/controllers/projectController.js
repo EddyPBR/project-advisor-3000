@@ -51,7 +51,6 @@ module.exports = {
   async update(request, response) {
     try {
       const { title, description, tasks } = request.body;
-
       const project = await Project.findByIdAndUpdate(
         request.params.projectId,
         {
